@@ -1,0 +1,48 @@
+{
+  "personal_info": {
+    "full_name": "Yunwei Zhang",
+    "title": "Senior Software Engineer",
+    "email": "yunworks@outlook.com",
+    "phone": "+1 (415) 937-0666",
+    "location": "5075 161st St W, Lakeville, MN 55044",
+    "linkedin_url": "https://linkedin.com/in/yunwei-zh",
+    "portfolio_url": "https://yunzhang.vercel.app",
+    "github_url": "https://github.com/yunwei-zh"
+  },
+  "experiences": [
+    {
+      "company_name": "Ticketmaster",
+      "role": "Senior Software Engineer",
+      "location": "Remote",
+      "start_date": "05/2022",
+      "end_date": "Present",
+      "company_url": ""
+    },
+    {
+      "company_name": "GoodRx",
+      "role": "Software Engineer",
+      "location": "Remote",
+      "start_date": "08/2018",
+      "end_date": "04/2022",
+      "company_url": ""
+    },
+    {
+      "company_name": "Citius Tech",
+      "role": "Software Developer",
+      "location": "Remote",
+      "start_date": "09/2014",
+      "end_date": "07/2018",
+      "company_url": ""
+    }
+  ],
+  "education": [
+    {
+      "institution": "University Of Minnesota, Twin-Cities",
+      "degree": "Bachelor of Science, Computer Science",
+      "location": "Minneapolis, MN",
+      "start_date": "04/2010",
+      "end_date": "08/2014",
+      "description": ""
+    }
+  ]
+}

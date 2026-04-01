@@ -1,0 +1,32 @@
+{
+  "Programming Languages": [
+    "C/C++", "C#", "JavaScript", "TypeScript", "PHP", "Java", "Python", "Go", "Ruby", "GraphQL", "Dart", "HTML5", "CSS3", "SCSS", "Solidity", "Rust", "GLSL", "HLSL"
+  ],
+  "C/C++ & C#": [
+    "C++11", "C++14", "C++17", "C++20", ".NET", ".NET Core", "ASP.NET", "ASP.NET Core", "ASP.NET MVC", "ASP.NET Web API"
+  ],
+  "JavaScript & TypeScript": [
+    "Angular", "React", "React Native", "Redux", "React Hooks", "React Router", "React Query", "MUI (Material UI)", "Express.js", "Node.js", "jQuery", "Next.js", "NestJS", "Vue.js", "D3.js", "Web3.js", "Vanilla JS", "Babylon.js", "Three.js", "WebGL", "Jest", "Mocha", "Bootstrap", "Tailwind CSS", "Flutter", "Sass", "Less", "AR/VR", "WebXR", "OpenXR"
+  ],
+  "Java & PHP": [
+    "Spring", "Spring Boot", "Spring MVC", "Spring Security", "GWT (Google Web Toolkit)", "Hibernate", "JSF (JavaServer Faces)", "JPA", "JUnit", "J2EE", "Selenium", "Laravel", "CodeIgniter", "CakePHP", "WordPress", "Symfony", "Magento", "Drupal"
+  ],
+  "Python, Go (Golang), Ruby": [
+    "Flask", "Django", "FastAPI", "PyPy", "Pytest", "Gin", "Iris", "Fast HTTP", "Ruby on Rails", "Rails API", "Turbo Drive", "Turbo Frames", "Turbo Streams"
+  ],
+  "AI & Machine Learning": [
+    "AGI", "LangChain", "LangGraph", "Prompt Engineering", "RAG", "LoRA", "Fine-Tuning", "SFT", "RLHF", "AI Agents", "Large Language Models", "OpenAI", "ChatGPT", "Google Gemini", "Anthropic Claude", "Meta Llama", "Mistral", "Machine Learning", "Deep Learning", "TensorFlow", "PyTorch", "Keras", "NumPy", "Pandas", "Scikit-Learn"
+  ],
+  "Database": [
+    "Microsoft SQL Server", "Azure SQL Database", "PostgreSQL", "Oracle Database", "MySQL", "MongoDB", "Cassandra", "DynamoDB", "Redis"
+  ],
+  "Cloud Platforms": [
+    "AWS", "AWS Lambda", "AWS IAM", "AWS DRS", "Amazon EC2", "Amazon ECR", "Amazon ECS", "Amazon EKS", "Amazon RDS", "Amazon S3", "Amazon CloudWatch", "Amazon SNS", "Amazon SQS", "Microsoft Azure", "Azure Functions", "Azure Kubernetes Service", "Azure DevOps", "Azure Data Lake", "Azure Cosmos DB", "Azure Key Vault", "Azure Monitor", "GCP", "GKE (Google Kubernetes Engine)", "Google Analytics", "BigQuery", "Pub/Sub", "Dataflow", "Firebase", "ServiceNow", "Terraform", "Teradata", "Snowflake", "Databricks", "Datadog"
+  ],
+  "Others": [
+    "Git", "Docker", "Jenkins", "Jira", "Agile", "Scrum", "Kubernetes", "CI/CD", "UI/UX", "TDD (Test-Driven Development)", "RESTful API", "E-Commerce", "Prometheus", "Grafana", "BigCommerce", "Kafka", "Spark", "Shopify", "CMS", "Kentico", "Contentful", "Ivanti", "Parasoft", "RabbitMQ", "gRPC", "ETL", "ELK", "Elasticsearch", "Logstash", "Kibana", "Dynamics 365", "ArcGIS", "ESRI", "Tableau", "PWA", "SPA", "IaC", "SaaS", "IaaS", "PaaS", "Solana", "Unity"
+  ],
+  "Soft Skills": [
+    "Communication", "Teamwork", "Problem Solving", "Time Management", "Leadership", "Adaptability", "Creativity", "Conflict Resolution", "Critical Thinking", "Customer Service", "Decision Making", "Emotional Intelligence", "Flexibility", "Goal Setting", "Interpersonal Skills", "Negotiation", "Patience", "Problem Analysis", "Conflict Management", "Resilience", "Strategic Thinking"
+  ]
+}

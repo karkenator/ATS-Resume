@@ -1,91 +1,67 @@
 # ATS Resume Style Reference
 
-Extracted from sample: `David Gabriel.docx`
-
 ## Page Layout
 - Page size: 8.5" x 11" (US Letter)
-- Margins: 0.5" all sides (top, bottom, left, right)
+- Margins: 0.5" all sides
+- **Total: 2 pages**
 
-## Resume Structure (in order)
-1. **Name** (Title style)
-2. **Job Title** (Subtitle style) — e.g., "Senior Software Engineer | Senior .NET Engineer"
-3. **Contact Info** (Contact style) — phone, email, LinkedIn, GitHub (tab-separated)
-4. **Profile/Summary** (Heading 1 + Normal)
-5. **Skills** (Heading 1 + Heading 2 subcategories + Normal lists)
-6. **Work Experience** (Heading 1 + entries)
-7. **Education** (Heading 1 + entries)
+## Page Layout Structure (2 Pages)
+- **Page 1:** Name, Title, Contact, Profile, Skills, Work Experience header + first company (dynamic bullet count fills page)
+- **Page 2:** Remaining experiences (8-10 bullets each to fill page) + Education
+- Hard page break after first experience only
 
 ## Typography
 
-### Title (Name)
-- Font: **Noto Sans**, 28pt
-- Color: `#1F4E79`
-- Line spacing: 1.0
-- Spacing after: 12pt (152400 EMU)
+**Single font:** Calibri (DOCX) / Helvetica (PDF)
 
-### Subtitle (Job Title)
-- Font: **Noto Sans**, 14pt
-- Color: `#5A5A5A`
-- Spacing after: 12pt
+| Element | Size | Weight | Color |
+|---------|------|--------|-------|
+| Name | 28pt | Normal | `#1F4E79` |
+| Job Title | 14pt | Normal | `#5A5A5A` |
+| Contact / URLs | 10pt | Normal | Black |
+| Section Headers | 16pt | Bold, ALL CAPS | `#1F4E79` |
+| Company + Role | 12pt | Bold | Black |
+| Period + Location | 11pt | Normal | `#595959` |
+| Skills (per line) | 10.5pt | Category bold, skills normal | Black |
+| Body / Summary | 10.5pt | Normal | Black |
+| Bullet Points | 10.5pt | Normal (keywords bold) | Black |
 
-### Contact
-- Font: **Verdana**, 10pt
-- Spacing after: 8pt (101600 EMU)
-- Tab-separated values (email | phone | LinkedIn | GitHub)
-
-### Heading 1 (Section Headers: PROFILE, SKILLS, WORK EXPERIENCE, EDUCATION)
-- Font: **Noto Sans**, 16pt
-- Color: `#1F4E79`
-- ALL CAPS (caps property enabled)
-- Bottom border: single line, 6/8pt, color `#1F4E79`
-- Spacing before: 12pt (240 twentieths = 152400 EMU)
+## Section Header Style
+- 16pt Bold, ALL CAPS, `#1F4E79`
+- Bottom border: thin line, color `#1F4E79`
+- Spacing before: 6pt, after: 2pt
 - Keep with next: true
 
-### Heading 2 (Company Name + Role / Skill Category)
-- Font: **Merriweather**, 12pt
-- Bold: true
-- Spacing before: 8pt (101600 EMU)
-- Spacing after: 0
+## Skills Section Format
+Compact — one line per category, wrapping as needed:
+```
+**Programming Languages:** JavaScript, TypeScript, Python, GraphQL, HTML5, CSS3
+**JavaScript & TypeScript:** React, Redux, Node.js, Express.js, Next.js, Jest, Tailwind CSS
+**AI & Machine Learning:** RAG, LangChain, Prompt Engineering, Large Language Models, OpenAI
+```
 
-### Heading 3 (Period + Location)
-- Font: **Noto Sans**, 11pt
-- Color: `#595959`
-- Spacing before: 2pt (25400 EMU)
-- Spacing after: 2pt (25400 EMU)
-
-### Normal (Body text / Skill lists / Profile paragraph)
-- Font: inherits theme (default), 10.5pt
-- Spacing after: 4pt (50800 EMU)
-- Skills in profile paragraph: **bold** for keyword emphasis
-
-### List Paragraph (Bullet points under Work Experience)
-- Inherits Normal style (10.5pt)
-- Left indent: 720 twips (0.5")
-- Bulleted list
-- Each bullet: 25-30 words (~2 lines)
-
-## Color Palette
-| Usage | Hex | Description |
-|-------|-----|-------------|
-| Name / Section headers | `#1F4E79` | Dark blue |
-| Subtitle | `#5A5A5A` | Medium gray |
-| Period/Location | `#595959` | Medium gray |
-| Body text | Default (black) | Standard |
+Skills selected from `backend/data/master_skills.json`:
+- **Programming Languages:** always JS, TS, Python, HTML5, CSS3 + job-matched
+- **JS/TS:** core frameworks (React, Redux, Node.js, Express.js, Next.js, Jest, Bootstrap, Tailwind CSS, jQuery) + job-matched
+- **Python:** core frameworks (Flask, Django, FastAPI, Pytest) + job-matched
+- **AI:** full category if AI-focused job, minimal (RAG, LangChain, Prompt Engineering, LLMs, OpenAI) otherwise
+- **All others:** only job-matched skills from master list
 
 ## Bullet Point Rules
-- Latest/most recent company: most bullet points (e.g., 18 for primary role)
-- Subsequent companies: fewer bullets (e.g., 11, 9, 9)
-- Each bullet starts with a strong action verb
-- Each bullet: 25-30 words
-- Keywords from job description are matched and incorporated
+- First company: **dynamic count** (fills remainder of page 1, typically 8-12)
+- Subsequent companies: **7-10 bullets** each (fills page 2)
+- Each bullet: 25-30 words (~2 lines)
+- Strong action verb start, distinct projects, real-world hands-on work
+- Keywords from job description bolded
+- Even older companies should weave in modern tech context
 
-## Skills Section Structure
-Skills grouped by category using Heading 2:
-- Programming Languages
-- Technology-specific groups (e.g., "C/C++ & C#", "JavaScript & TypeScript & UI")
-- Database
-- Cloud Platforms
-- Others
-- Soft Skills
+## Bullet Indent
+- Left indent: 360 twips (0.5"), hanging: 180 twips
+- Bullet character: Unicode bullet (U+2022), Calibri font
 
-Each category lists comma-separated technologies as Normal text.
+## Spacing Guidelines (tight to fit 2 pages)
+- Minimize all spacing — 0-2pt between elements
+- Section headers: 6pt before, 2pt after
+- Bullets: 0pt before, 0pt after
+- Company heading: 4pt before
+- No large gaps anywhere

@@ -36,10 +36,47 @@ This platform will generate an ATS (Applicant Tracking System) friendly resume b
 
 ### 4. Professional Experience Generation:
    - For each company experience, the system will:
-     - Use the extracted job description data to generate **professional experience bullet points**.
+     - Use the extracted job description data to generate **project-based professional experience bullet points**.
+     - **Each bullet must describe a specific, concrete project or initiative** — NOT generic responsibilities.
+     - **Bullet Pattern:** [Action verb] + [specific system/project] + [using technologies] + [to solve problem] + [measurable result]
      - The bullets should match the **job description’s tone** and **requirements**, ensuring a high matching score.
-     - **Bullet Count Rule:** The latest company experience should have the **most bullet points** (for example, if there are 3 companies, the bullets would be: 5, 3, 3). 
+     - **Bullet Count Rule:** The first (most recent) company gets a **dynamic bullet count** to fill remaining space on page 1 (typically 4-8). Subsequent companies get **5–8 bullets** each.
      - **Word Count:** Each bullet should contain between **25-30 words**, which translates to about **2 lines**.
+     - **Example bullets:**
+       - "Led the migration of legacy .NET Framework 4.8 services to .NET 8 to resolve performance bottlenecks and reduce technical debt by 35%."
+       - "Built a Kafka-based event streaming architecture using Java and Spring Boot to replace polling mechanisms, boosting real-time data throughput by 60%."
+       - "Created Python-based ETL pipelines using Airflow and Pandas to replace slow SQL Server jobs, cutting nightly data sync duration from 4 hours to 45 minutes."
+
+### Master Skills List
+
+A comprehensive skills catalog is stored in `backend/data/master_skills.json` with categories: Programming Languages, C/C++ & C#, JavaScript & TypeScript, Java & PHP, Python/Go/Ruby, AI & Machine Learning, Database, Cloud Platforms, Others, Soft Skills.
+
+**Skill selection logic** (in `ai_service.py`):
+1. Analyze the job description to extract required skills
+2. Match extracted skills against the master list and select relevant ones per category
+3. **Always include:** JavaScript & TypeScript frameworks + Python/Go/Ruby frameworks (full categories)
+4. **AI & Machine Learning:** Full category if job is AI-focused, minimal subset (RAG, LangChain, Prompt Engineering, LLMs, OpenAI) if not
+5. **Other categories:** Only skills that match the job description
+
+### 2-Page Layout Requirement
+
+The resume must be exactly 2 pages:
+- **Page 1:** Name, Title, Contact, Profile/Summary, Skills, Work Experience header + first (most recent) company with dynamic bullet count (fills remaining page space)
+- **Page 2:** Remaining work experiences (5–8 bullets each) + Education
+
+The first experience bullet count is calculated dynamically based on how much vertical space the skills section uses. A hard page break is inserted after the first experience only.
+
+### Font Requirement
+
+Use the most readable, ATS-friendly font:
+- **DOCX:** Calibri (universally available in Word, modern sans-serif)
+- **PDF:** Helvetica (built-in to ReportLab, visually similar to Calibri/Arial)
+
+All text uses a single font family — no mixing of Noto Sans, Merriweather, Verdana, etc.
+
+### Real-World Experience Requirement
+
+All generated bullet points must describe realistic, hands-on engineering work — specific projects, migrations, system builds, pipeline deployments, infrastructure automation, and API integrations. No generic responsibilities or theoretical language. Every bullet should read as a completed achievement with tangible, measurable impact.
 
 ### 5. Resume Format Generation:
    - **ATS-Friendly Resume:** 
@@ -80,13 +117,14 @@ This platform will generate an ATS (Applicant Tracking System) friendly resume b
 4. Education
 
 ### Resume Typography
-- Font size for name: 28pt (Noto Sans, color #1F4E79)
-- Font size for title: 14pt (Noto Sans, e.g., "Senior Software Engineer")
-- Font size for contact/URLs: 10pt (Verdana)
-- Font size for section headers: 16pt (Noto Sans, ALL CAPS, #1F4E79, bottom border)
-- Font size for content: 10.5pt
-- Font size for company period: 11pt (Noto Sans, #595959)
-- Font size for company name and role: 12pt (Merriweather, bold)
+- **Font family: Calibri** (DOCX) / **Helvetica** (PDF) — single font throughout
+- Font size for name: 28pt (Calibri, color #1F4E79)
+- Font size for title: 14pt (Calibri, e.g., "Senior Software Engineer")
+- Font size for contact/URLs: 10pt (Calibri)
+- Font size for section headers: 16pt (Calibri, ALL CAPS, #1F4E79, bottom border)
+- Font size for content: 10.5pt (Calibri)
+- Font size for company period: 11pt (Calibri, #595959)
+- Font size for company name and role: 12pt (Calibri, bold)
 - Page margins: 0.5" all sides
 
 ### Style Reference
